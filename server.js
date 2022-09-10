@@ -1,23 +1,26 @@
-const path = require('path')
 const express = require('express')
-const dotenv = require('dotenv')
-const MongoStore = require('connect-mongo') //! unlike traversy Media - don't added session here. 
+const app = express()
+const mongoose = require('mongoose')
+const passport = require('passport')
+const logger = require('morgan')
 const connectDB = require('./config/db')
-const { default: mongoose } = require('mongoose')
-
+const mainRoutes = require('./routes/main')
 
 // Load config by calling dotenv and creating an object with the path
-dotenv.config({path: './config/.env'})
+require('dotenv').config({ path: './config/.env' })
 
 connectDB()
 
-const app = express()
+app.set('view engine', 'ejs')
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(logger('dev'))
 
 
-// Static Folder named public
-app.use(express.static(path.join(__dirname, 'public'))) //__dirname means go to the root directory, then look for a public folder. 
+app.use('/', mainRoutes) //Things that need a route will go to the /main file to find the correct route
 
-
+// Port
 const PORT = process.env.PORT || 5017
 
 app.listen(
