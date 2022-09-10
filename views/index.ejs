@@ -1,12 +1,45 @@
 <%- include('partials/header') -%>
-<nav class="nav">
-    <div class="row justify-content-around mt-5">
-        <a href="/login" class="col-3 btn btn-primary"> Login</a>
-        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
-    </div>
-</nav>
 <main class="container">
     <h1>Find a Resource</h1>
+    <form class="resource-Form">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1" id="affordableHousing">
+              Affordable Housing
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1" id="tempHousing">
+              Temporary Shelter (Non-Domenstic Violence)
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1" id="dvHousing">
+              Domestic Violence Shelter
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1" id="food">
+              Food
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1" id="clothing">
+              Clothing
+            </label>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip Code</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+          <div class="submit-btn">
+          <button type="submit" class="btn btn-primary btn-submit">Find Resources</button>
+          </div>
+    </form>
 </main>
     
 

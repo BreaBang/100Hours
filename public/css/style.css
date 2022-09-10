@@ -1,0 +1,22 @@
+.btn-navStyle{
+    margin: 10px 0px 10px 30px;
+}
+.btn-submit{
+    width: 200px;
+    margin-top: 30px;
+}
+
+.resource-Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+main {
+    margin: 40px 20px 20px 20px;
+}
+.space{
+    height: 60px;
+}
+a{
+    text-decoration: none;
+}
