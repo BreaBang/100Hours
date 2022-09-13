@@ -5,6 +5,7 @@ const passport = require('passport')
 const logger = require('morgan')
 const connectDB = require('./config/db')
 const mainRoutes = require('./routes/main')
+const resourceRoutes = require('./routes/resources')
 
 // Load config by calling dotenv and creating an object with the path
 require('dotenv').config({ path: './config/.env' })
@@ -19,6 +20,7 @@ app.use(logger('dev'))
 
 
 app.use('/', mainRoutes) //Things that need a route will go to the /main file to find the correct route
+app.use('/', resourceRoutes)
 
 // Port
 const PORT = process.env.PORT || 5017

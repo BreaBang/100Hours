@@ -13,6 +13,12 @@
 }
 main {
     margin: 40px 20px 20px 20px;
+    display: flex;
+    flex-direction: row;
+   
+}
+.img-home{
+    width: 400px;
 }
 .space{
     height: 60px;
